@@ -1,10 +1,10 @@
 
-const path = require('path');
 const express = require('express');
 const route = express.Router();
+const rootdir = require('../services/utils');
+const gethomepage = require('../controllers/homecontroller');
 
-
-route.get('/', (req,res,next) => {res.sendFile(path.join(__dirname, '../', 'public','homepage.html'))});
+route.get('/', gethomepage);
 
 
 

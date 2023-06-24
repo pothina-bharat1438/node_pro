@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= productTitle %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>E-commerece Website</header>
+    <nav>
+        <ul>
+            <li>
+                <a href = "/">Home</a>
+            </li>
+            <li>
+                <a href="/products/users">Users</a>
+            </li>
+            <li>
+                <a href="/products/add">Add product</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>products list</h1>
+        <% if(productsdata.length) {%>
+            <% for(let product of productsdata) {%>
+            <div>
+             <%= product.title%>
+            </div>
+            <%}%>
+            <% } else {%>
+                <h3> no products available</h3>
+            <%}%>
+    </main>
+   
+</body>
+</html>
